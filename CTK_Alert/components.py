@@ -36,12 +36,12 @@ LINK_BTN = {**DEFAULT_BTN, "width": 70, "height": 25, "text_color": "#3574F0"}
 
 class CTkAlert(ctk.CTkToplevel):
     def __init__(self, state: str = "info", title: str = "Информация",
-                 body_text: str = "Body text", btn1: str = "OK",  height=200):
+                 body_text: str = "Body text", btn1: str = "OK"):
         super().__init__()
         self.old_y = None
         self.old_x = None
         self.width = 420
-        self.height = height
+        self.height = 200 + len(body_text.split("\n") * 10)
         center_window(self, self.width, self.height)
         self.resizable(False, False)
         self.overrideredirect(True)

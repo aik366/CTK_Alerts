@@ -4,7 +4,7 @@ from CTK_Alert.components import CTkAlert, CTkBanner, CTkNotification
 
 ctk.set_appearance_mode("dark")
 text_temp = "Hello World!sdfsdf\nHello World!\nHello World!\nHello World!\nHello World!\nHello World!\nHello World!"
-len_txt = 200 + len(text_temp.split("\n")) * 10
+# len_txt = 200 + len(text_temp.split("\n")) * 10
 
 
 class App(ctk.CTk):
@@ -22,7 +22,7 @@ class App(ctk.CTk):
         self.button3.pack(padx=20, pady=20)
 
     def alert(self):
-        my_alert = CTkAlert(state="info", body_text=text_temp, btn1="Ok", height=len_txt)
+        my_alert = CTkAlert(state="info", body_text=text_temp, btn1="Ok")
         answer = my_alert.get()  # get answer
         print(answer)
 
